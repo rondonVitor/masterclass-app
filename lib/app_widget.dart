@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/modules/home/home_page.dart';
+import 'package:masterclass_app/shared/themes/app_colors.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -8,9 +9,10 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Masterclass Atividades',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        primaryColor: Colors.green,
+        primaryColor: AppColors.primary,
+        backgroundColor: AppColors.background,
       ),
       routes: {
         "/": (context) => const HomePage(),

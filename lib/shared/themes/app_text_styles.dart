@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 class TextStyles {
   static final headline1 = GoogleFonts.poppins(
     fontSize: 20,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.bold,
   );
   static final headline2 = GoogleFonts.poppins(
     fontSize: 16,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.bold,
   );
   static final bodyText1 = GoogleFonts.montserrat(
     fontSize: 14,
