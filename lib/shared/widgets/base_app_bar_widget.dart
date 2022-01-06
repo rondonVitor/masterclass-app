@@ -51,7 +51,7 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           child: IconButton(
             onPressed: () {},
             icon: Image.asset(
-              AppImages.iconAwesomeMoon,
+              AppImages.iconMoon,
             ),
           ),
         )
@@ -60,5 +60,5 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => new Size.fromHeight(130.0);
+  Size get preferredSize => new Size.fromHeight(110.0);
 }
