@@ -32,4 +32,8 @@ class AppImages {
   static const tinderConversationBalloon =
       "assets/images/icon_conversation_balloon.png";
   static const tinderIconApple = "assets/images/icon_apple.png";
+
+  static const mockupChallenge1Logo =
+      "assets/images/mockup_challenge1_logo.jpeg";
+  static const mockupChallenge1IconGoogle = "assets/images/icon_google.png";
 }
