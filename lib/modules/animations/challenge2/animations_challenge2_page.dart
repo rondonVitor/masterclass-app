@@ -29,7 +29,7 @@ class _AnimationsChallenge2PageState extends State<AnimationsChallenge2Page> {
           color: AppColors.background,
           child: SingleChildScrollView(
             child: Column(
-              children: [
+              children: const [
                 ListTileAnimationsPage(),
                 ListTileAnimationsPage(),
                 ListTileAnimationsPage(),

@@ -24,13 +24,18 @@ class AnimationsPage extends StatelessWidget {
             children: const [
               ExerciseWidget(
                 numberExercise: '1',
-                titleExercise: 'Challenge 01',
+                titleExercise: 'Desafio 01 (implicita)',
                 urlRedirect: '/animations/challenge1',
               ),
               ExerciseWidget(
                 numberExercise: '2',
-                titleExercise: 'Challenge 02',
+                titleExercise: 'Desafio 02 (implicita)',
                 urlRedirect: '/animations/challenge2',
+              ),
+              ExerciseWidget(
+                numberExercise: '3',
+                titleExercise: 'Desafio 03 (controlada)',
+                urlRedirect: '/animations/challenge3',
               ),
             ],
           ),
