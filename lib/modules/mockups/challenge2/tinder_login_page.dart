@@ -10,10 +10,6 @@ class TinderLoginPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {},
-        ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
