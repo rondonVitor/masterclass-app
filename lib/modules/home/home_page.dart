@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
 import 'package:masterclass_app/shared/widgets/base_app_bar_widget.dart';
+import 'package:masterclass_app/shared/widgets/custom_bottom_navigation_bar_widget.dart';
 import 'package:masterclass_app/shared/widgets/custom_card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: BaseAppBarWidget(
+        imgLogo: true,
         title: 'Olá, Vitor\n',
         appBar: AppBar(),
       ),
@@ -29,7 +31,7 @@ class HomePage extends StatelessWidget {
                     subtitle:
                         'Estudo sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos',
                     urlImage: AppImages.iconRunning,
-                    redirectUrl: '/',
+                    redirectUrl: '/animations',
                     exercisesNumber: '4',
                   ),
                   CustomCardWidget(
@@ -53,6 +55,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const CustomBottomNavigationBarWidget(),
     );
   }
 }

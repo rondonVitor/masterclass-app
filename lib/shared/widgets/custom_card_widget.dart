@@ -105,7 +105,9 @@ class CustomCardWidget extends StatelessWidget {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(redirectUrl);
+                    },
                     style: ElevatedButton.styleFrom(
                       fixedSize: const Size(119, 35),
                       primary: AppColors.primary,

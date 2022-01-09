@@ -7,11 +7,13 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final Color backgroundColor = AppColors.background;
   final String title;
   final AppBar appBar;
+  final bool imgLogo;
 
   BaseAppBarWidget({
     Key? key,
     required this.title,
     required this.appBar,
+    required this.imgLogo,
   }) : super(key: key);
 
   @override
@@ -23,9 +25,11 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            child: Image.asset(AppImages.logo),
-          ),
+          imgLogo
+              ? SizedBox(
+                  child: Image.asset(AppImages.logo),
+                )
+              : Container(),
           Padding(
             padding: const EdgeInsets.only(left: 4),
             child: RichText(

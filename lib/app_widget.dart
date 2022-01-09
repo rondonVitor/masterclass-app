@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app/modules/animations/animations_page.dart';
+import 'package:masterclass_app/modules/animations/challenge1/animations_challenge1_page.dart';
+import 'package:masterclass_app/modules/animations/challenge2/animations_challenge2_page.dart';
 import 'package:masterclass_app/modules/home/home_page.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 
@@ -16,6 +19,9 @@ class AppWidget extends StatelessWidget {
       ),
       routes: {
         "/": (context) => const HomePage(),
+        "/animations": (context) => const AnimationsPage(),
+        "/animations/challenge1": (context) => const AnimationsChallenge1Page(),
+        "/animations/challenge2": (context) => const AnimationsChallenge2Page(),
       },
     );
   }

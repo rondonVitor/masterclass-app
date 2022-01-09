@@ -5,11 +5,11 @@ import 'package:masterclass_app/shared/themes/app_colors.dart';
 class TextStyles {
   static final headline1 = GoogleFonts.poppins(
     fontSize: 20,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w600,
   );
   static final headline2 = GoogleFonts.poppins(
     fontSize: 16,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w600,
     color: AppColors.highlight,
   );
   static final bodyText1 = GoogleFonts.montserrat(
