@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                     subtitle:
                         'Aplicação da técnica de leitura de mockup, contendo 2 exercícios',
                     urlImage: AppImages.iconGlasses,
-                    redirectUrl: '/',
+                    redirectUrl: '/mockups',
                     exercisesNumber: '2',
                   ),
                   CustomCardWidget(

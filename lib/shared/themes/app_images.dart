@@ -26,4 +26,10 @@ class AppImages {
   static const iconRunning = "assets/images/running.png";
   static const iconRunning2x = "assets/images/running2x.png";
   static const iconRunning3x = "assets/images/running3x.png";
+
+  static const tinderLogo = "assets/images/tinder_logo.png";
+  static const tinderIconFacebook = "assets/images/icon_facebook.png";
+  static const tinderConversationBalloon =
+      "assets/images/icon_conversation_balloon.png";
+  static const tinderIconApple = "assets/images/icon_apple.png";
 }
