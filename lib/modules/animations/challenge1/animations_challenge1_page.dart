@@ -20,7 +20,7 @@ class _AnimationsChallenge1PageState extends State<AnimationsChallenge1Page> {
       appBar: BaseAppBarWidget(
         imgLogo: false,
         appBar: AppBar(),
-        title: 'Animations Challenge 01\n',
+        title: 'Container Animado\n',
       ),
       body: Container(
         width: double.infinity,
