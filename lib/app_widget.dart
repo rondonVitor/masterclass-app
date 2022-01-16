@@ -3,6 +3,8 @@ import 'package:masterclass_app/modules/animations/animations_page.dart';
 import 'package:masterclass_app/modules/animations/challenge1/animations_challenge1_page.dart';
 import 'package:masterclass_app/modules/animations/challenge2/animations_challenge2_page.dart';
 import 'package:masterclass_app/modules/animations/challenge3/animations_challenge3_page.dart';
+import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/product_page.dart';
+import 'package:masterclass_app/modules/design_paterns/design_paterns_page.dart';
 import 'package:masterclass_app/modules/home/home_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge1/mockups_challenge1_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge2/tinder_login_page.dart';
@@ -30,6 +32,8 @@ class AppWidget extends StatelessWidget {
         "/mockups": (context) => const MockupsPage(),
         "/mockups/challenge1": (context) => const MockupsChallenge1Page(),
         "/mockups/challenge2": (context) => const TinderLoginPage(),
+        "/design_paterns": (context) => const DesignPaternsPage(),
+        "/design_paterns/challenge1": (context) => const ProductPage()
       },
     );
   }

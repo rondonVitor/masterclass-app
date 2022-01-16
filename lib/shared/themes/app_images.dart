@@ -36,4 +36,6 @@ class AppImages {
   static const mockupChallenge1Logo =
       "assets/images/mockup_challenge1_logo.jpeg";
   static const mockupChallenge1IconGoogle = "assets/images/icon_google.png";
+
+  static const designServices = "assets/images/design_services.png";
 }

@@ -49,6 +49,14 @@ class HomePage extends StatelessWidget {
                     redirectUrl: '/',
                     exercisesNumber: '3',
                   ),
+                  CustomCardWidget(
+                    title: 'Design Paterns',
+                    subtitle:
+                        'Estudo sobre Design Paterns, Controller, Service, Repository e DataSource. Contendo 1 exercício',
+                    urlImage: AppImages.designServices,
+                    redirectUrl: '/design_paterns',
+                    exercisesNumber: '1',
+                  ),
                 ],
               ),
             ),
