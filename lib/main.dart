@@ -5,6 +5,7 @@ import 'package:masterclass_app/app_widget.dart';
 import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/controllers/product_controller.dart';
 import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/datasources/product_datasource.dart';
 import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/repositories/product_repository.dart';
+import 'package:masterclass_app/shared/widgets/custom_bottom_navigation_bar_widget.dart';
 
 final getIt = GetIt.instance;
 
@@ -14,6 +15,7 @@ void main() {
   getIt.registerFactory<IProductRepository>(
       () => ProductRepository(getIt.get()));
   getIt.registerSingleton(ProductController(getIt.get()));
+  getIt.registerSingleton(SelectedIndex());
 
   runApp(const AppWidget());
 }
