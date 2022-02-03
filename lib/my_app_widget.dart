@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masterclass_app/main.dart';
 import 'package:masterclass_app/modules/about/about_page.dart';
 import 'package:masterclass_app/modules/home/home_page.dart';
+import 'package:masterclass_app/modules/repository/repository_page.dart';
 import 'package:masterclass_app/shared/utils/selected_index_navigation.dart';
 import 'package:masterclass_app/shared/widgets/custom_bottom_navigation_bar_widget.dart';
 
@@ -16,7 +17,7 @@ class _MyAppWidgetState extends State<MyAppWidget> {
   final selectedIndex = getIt.get<SelectedIndexNavigation>();
   final pages = [
     const HomePage(),
-    Container(),
+    const RepositoryPage(),
     const AboutPage(),
   ];
 
