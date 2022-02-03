@@ -3,6 +3,7 @@ import 'package:masterclass_app/main.dart';
 
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
+import 'package:masterclass_app/shared/utils/selected_index_navigation.dart';
 
 class CustomBottomNavigationBarWidget extends StatefulWidget {
   const CustomBottomNavigationBarWidget({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class CustomBottomNavigationBarWidget extends StatefulWidget {
 
 class _CustomBottomNavigationBarWidgetState
     extends State<CustomBottomNavigationBarWidget> {
-  final selectedIndex = getIt.get<SelectedIndex>();
+  final selectedIndex = getIt.get<SelectedIndexNavigation>();
 
   @override
   void initState() {
@@ -39,7 +40,6 @@ class _CustomBottomNavigationBarWidgetState
             GestureDetector(
               onTap: () {
                 selectedIndex.value = 0;
-                Navigator.of(context).pushReplacementNamed('/');
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -75,7 +75,6 @@ class _CustomBottomNavigationBarWidgetState
             GestureDetector(
               onTap: () {
                 selectedIndex.value = 1;
-                Navigator.of(context).pushReplacementNamed('/');
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -111,7 +110,6 @@ class _CustomBottomNavigationBarWidgetState
             GestureDetector(
               onTap: () {
                 selectedIndex.value = 2;
-                Navigator.of(context).pushReplacementNamed('/about');
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -152,13 +150,5 @@ class _CustomBottomNavigationBarWidgetState
         ),
       ),
     );
-  }
-}
-
-class SelectedIndex extends ValueNotifier<int> {
-  SelectedIndex() : super(0);
-
-  set setSelectedIndex(int index) {
-    value = index;
   }
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
 import 'package:masterclass_app/shared/widgets/base_app_bar_widget.dart';
-import 'package:masterclass_app/shared/widgets/custom_bottom_navigation_bar_widget.dart';
 import 'package:masterclass_app/shared/widgets/custom_card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -63,7 +62,6 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const CustomBottomNavigationBarWidget(),
     );
   }
 }

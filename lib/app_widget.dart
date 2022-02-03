@@ -10,10 +10,29 @@ import 'package:masterclass_app/modules/home/home_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge1/mockups_challenge1_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge2/tinder_login_page.dart';
 import 'package:masterclass_app/modules/mockups/mockups_page.dart';
+import 'package:masterclass_app/my_app_widget.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 
-class AppWidget extends StatelessWidget {
+class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
+
+  @override
+  State<AppWidget> createState() => _AppWidgetState();
+}
+
+class _AppWidgetState extends State<AppWidget>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
+    begin: Offset.zero,
+    end: const Offset(1.5, 0.0),
+  ).animate(CurvedAnimation(
+    parent: _controller,
+    curve: Curves.elasticIn,
+  ));
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +44,8 @@ class AppWidget extends StatelessWidget {
         backgroundColor: AppColors.background,
       ),
       routes: {
-        "/": (context) => const HomePage(),
+        "/": (context) => const MyAppWidget(),
+        "/home": (context) => const HomePage(),
         "/about": (context) => const AboutPage(),
         "/animations": (context) => const AnimationsPage(),
         "/animations/challenge1": (context) => const AnimationsChallenge1Page(),
