@@ -25,4 +25,9 @@ class TextStyles {
     fontWeight: FontWeight.normal,
     color: AppColors.description,
   );
+  static final textHighlight = GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.highlight,
+  );
 }

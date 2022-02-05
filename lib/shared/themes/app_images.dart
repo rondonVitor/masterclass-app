@@ -52,4 +52,7 @@ class AppImages {
   static const designServices = "assets/images/design_services.png";
 
   static const euImage = "assets/images/eu.png";
+
+  static const iconFlutter = "assets/images/flutter.png";
+  static const iconDart = "assets/images/dart.png";
 }

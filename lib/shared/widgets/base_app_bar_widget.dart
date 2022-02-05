@@ -22,6 +22,7 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       shadowColor: Colors.transparent,
       toolbarHeight: 130,
       backgroundColor: AppColors.background,
+      elevation: 0.0,
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
