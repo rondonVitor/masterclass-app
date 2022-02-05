@@ -23,6 +23,18 @@ class AppImages {
   static const iconToys2x = "assets/images/toys2x.png";
   static const iconToys3x = "assets/images/toys3x.png";
 
+  static const iconFacebook = "assets/images/facebook.png";
+  static const iconFacebook2x = "assets/images/facebook2x.png";
+  static const iconFacebook3x = "assets/images/facebook3x.png";
+
+  static const iconInstagram = "assets/images/instagram.png";
+  static const iconInstagram2x = "assets/images/instagram2x.png";
+  static const iconInstagram3x = "assets/images/instagram3x.png";
+
+  static const iconWhatsapp = "assets/images/whatsapp.png";
+  static const iconWhatsapp2x = "assets/images/whatsapp2x.png";
+  static const iconWhatsapp3x = "assets/images/whatsapp3x.png";
+
   static const iconRunning = "assets/images/running.png";
   static const iconRunning2x = "assets/images/running2x.png";
   static const iconRunning3x = "assets/images/running3x.png";
@@ -38,4 +50,6 @@ class AppImages {
   static const mockupChallenge1IconGoogle = "assets/images/icon_google.png";
 
   static const designServices = "assets/images/design_services.png";
+
+  static const euImage = "assets/images/eu.png";
 }

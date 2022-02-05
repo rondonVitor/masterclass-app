@@ -20,4 +20,9 @@ class TextStyles {
     fontSize: 12,
     fontWeight: FontWeight.normal,
   );
+  static final subtitle = GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.description,
+  );
 }
