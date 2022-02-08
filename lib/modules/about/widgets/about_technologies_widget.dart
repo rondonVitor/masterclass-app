@@ -30,13 +30,11 @@ class _AboutTechnologiesWidgetState extends State<AboutTechnologiesWidget> {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Tecnologias Favoritas',
             style: TextStyles.headline2,
-            textAlign: TextAlign.left,
           ),
           const SizedBox(
             height: 5,

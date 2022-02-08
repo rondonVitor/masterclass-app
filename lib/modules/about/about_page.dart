@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/modules/about/widgets/about_card_widget.dart';
+import 'package:masterclass_app/modules/about/widgets/about_skills.dart';
 import 'package:masterclass_app/modules/about/widgets/about_technologies_widget.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/widgets/base_app_bar_widget.dart';
@@ -31,6 +32,10 @@ class AboutPage extends StatelessWidget {
                     height: 10,
                   ),
                   AboutTechnologiesWidget(),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  AboutSkills()
                 ],
               ),
             ),

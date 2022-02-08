@@ -30,4 +30,9 @@ class TextStyles {
     fontWeight: FontWeight.normal,
     color: AppColors.highlight,
   );
+  static final textDescription = GoogleFonts.poppins(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppColors.description,
+  );
 }
