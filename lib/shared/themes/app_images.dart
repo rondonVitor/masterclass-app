@@ -1,43 +1,32 @@
 class AppImages {
   static const logo = "assets/images/logo.png";
-  static const logo2x = "assets/images/logo@2x.png";
-  static const logo3x = "assets/images/logo@3x.png";
 
-  static const iconGlasses = "assets/images/glasses.png";
-  static const iconGlasses2x = "assets/images/glasses2x.png";
-  static const iconGlasses3x = "assets/images/glasses3x.png";
+  static const iconGlassesBlack = "assets/images/glasses_black.png";
+  static const iconGlassesWhite = "assets/images/glasses_white.png";
 
-  static const iconGithub = "assets/images/github.png";
-  static const iconGithub2x = "assets/images/github2x.png";
-  static const iconGithub3x = "assets/images/github3x.png";
+  static const iconGithubBlack = "assets/images/github_black.png";
+  static const iconGithubWhite = "assets/images/github_white.png";
 
-  static const iconMoon = "assets/images/moon.png";
-  static const iconMoon2x = "assets/images/moon2x.png";
-  static const iconMoon3x = "assets/images/moon3x.png";
+  static const iconMoonBlack = "assets/images/moon_black.png";
+  static const iconMoonWhite = "assets/images/moon_white.png";
 
-  static const iconTarget = "assets/images/target.png";
-  static const iconTarget2x = "assets/images/target2x.png";
-  static const iconTarget3x = "assets/images/target3x.png";
+  static const iconTargetBlack = "assets/images/target_black.png";
+  static const iconTargetWhite = "assets/images/target_white.png";
 
-  static const iconToys = "assets/images/toys.png";
-  static const iconToys2x = "assets/images/toys2x.png";
-  static const iconToys3x = "assets/images/toys3x.png";
+  static const iconToysBlack = "assets/images/toys_black.png";
+  static const iconToysWhite = "assets/images/toys_white.png";
 
-  static const iconFacebook = "assets/images/facebook.png";
-  static const iconFacebook2x = "assets/images/facebook2x.png";
-  static const iconFacebook3x = "assets/images/facebook3x.png";
+  static const iconFacebookBlack = "assets/images/facebook_black.png";
+  static const iconFacebookWhite = "assets/images/facebook_white.png";
 
-  static const iconInstagram = "assets/images/instagram.png";
-  static const iconInstagram2x = "assets/images/instagram2x.png";
-  static const iconInstagram3x = "assets/images/instagram3x.png";
+  static const iconInstagramBlack = "assets/images/instagram_black.png";
+  static const iconInstagramWhite = "assets/images/instagram_white.png";
 
-  static const iconWhatsapp = "assets/images/whatsapp.png";
-  static const iconWhatsapp2x = "assets/images/whatsapp2x.png";
-  static const iconWhatsapp3x = "assets/images/whatsapp3x.png";
+  static const iconWhatsappBlack = "assets/images/whatsapp_black.png";
+  static const iconWhatsappWhite = "assets/images/whatsapp_white.png";
 
-  static const iconRunning = "assets/images/running.png";
-  static const iconRunning2x = "assets/images/running2x.png";
-  static const iconRunning3x = "assets/images/running3x.png";
+  static const iconRunningBlack = "assets/images/running_black.png";
+  static const iconRunningWhite = "assets/images/running_white.png";
 
   static const tinderLogo = "assets/images/tinder_logo.png";
   static const tinderIconFacebook = "assets/images/icon_facebook.png";
@@ -49,10 +38,13 @@ class AppImages {
       "assets/images/mockup_challenge1_logo.jpeg";
   static const mockupChallenge1IconGoogle = "assets/images/icon_google.png";
 
-  static const designServices = "assets/images/design_services.png";
+  static const designServicesBlack = "assets/images/design_services_black.png";
+  static const designServicesWhite = "assets/images/design_services_white.png";
 
   static const euImage = "assets/images/eu.png";
 
-  static const iconFlutter = "assets/images/flutter.png";
+  static const iconFlutterBlue = "assets/images/flutter_blue.png";
+  static const iconFlutterWhite = "assets/images/flutter_white.png";
+
   static const iconDart = "assets/images/dart.png";
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
+import 'package:masterclass_app/shared/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class CustomCardWidget extends StatelessWidget {
   final String title;
@@ -21,13 +22,15 @@ class CustomCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ThemeProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.only(left: 15, right: 15, top: 16),
       child: Container(
         width: double.infinity,
         height: 220,
         decoration: BoxDecoration(
-          color: AppColors.card,
+          color: Theme.of(context).cardColor,
           borderRadius: const BorderRadius.all(
             Radius.circular(20),
           ),
@@ -42,7 +45,7 @@ class CustomCardWidget extends StatelessWidget {
                     width: 43,
                     height: 43,
                     decoration: BoxDecoration(
-                      color: AppColors.primary,
+                      color: Theme.of(context).primaryColor,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(50),
                       ),
@@ -55,7 +58,9 @@ class CustomCardWidget extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      style: TextStyles.headline2,
+                      style: Theme.of(context).textTheme.headline2!.copyWith(
+                            color: Theme.of(context).highlightColor,
+                          ),
                     ),
                   ),
                   Text.rich(
@@ -71,7 +76,7 @@ class CustomCardWidget extends StatelessWidget {
                         TextSpan(
                           text: exercisesNumber,
                           style: TextStyle(
-                            color: AppColors.highlight,
+                            color: Theme.of(context).highlightColor,
                             fontSize: 12,
                           ),
                         ),
@@ -84,14 +89,22 @@ class CustomCardWidget extends StatelessWidget {
                 child: Center(
                   child: Text(
                     subtitle,
-                    style:
-                        TextStyle(color: AppColors.description, fontSize: 14),
+                    style: TextStyle(
+                      color: AppColors.description,
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ),
               Row(
                 children: [
-                  Image.asset(AppImages.iconGithub),
+                  provider.isDarkMode
+                      ? Image.asset(
+                          AppImages.iconGithubWhite,
+                        )
+                      : Image.asset(
+                          AppImages.iconGithubBlack,
+                        ),
                   const SizedBox(
                     width: 4,
                   ),
@@ -99,7 +112,7 @@ class CustomCardWidget extends StatelessWidget {
                     child: Text(
                       'Acessar código fonte',
                       style: TextStyle(
-                        color: AppColors.highlight,
+                        color: Theme.of(context).highlightColor,
                         fontSize: 12,
                       ),
                     ),
@@ -110,7 +123,7 @@ class CustomCardWidget extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       fixedSize: const Size(119, 35),
-                      primary: AppColors.primary,
+                      primary: Theme.of(context).primaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(23),
                       ),

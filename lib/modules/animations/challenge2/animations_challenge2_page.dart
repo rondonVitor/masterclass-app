@@ -26,7 +26,7 @@ class _AnimationsChallenge2PageState extends State<AnimationsChallenge2Page> {
       body: Container(
           width: double.infinity,
           height: double.infinity,
-          color: AppColors.background,
+          color: Theme.of(context).backgroundColor,
           child: SingleChildScrollView(
             child: Column(
               children: const [

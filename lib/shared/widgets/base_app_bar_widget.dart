@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
+import 'package:masterclass_app/shared/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
-class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  final Color backgroundColor = AppColors.background;
+class BaseAppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   final String title;
   final AppBar appBar;
   final bool imgLogo;
 
-  BaseAppBarWidget({
+  const BaseAppBarWidget({
     Key? key,
     required this.title,
     required this.appBar,
@@ -17,16 +16,26 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   }) : super(key: key);
 
   @override
+  State<BaseAppBarWidget> createState() => _BaseAppBarWidgetState();
+
+  @override
+  Size get preferredSize => const Size.fromHeight(110.0);
+}
+
+class _BaseAppBarWidgetState extends State<BaseAppBarWidget> {
+  @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ThemeProvider>(context);
+
     return AppBar(
       shadowColor: Colors.transparent,
       toolbarHeight: 130,
-      backgroundColor: AppColors.background,
+      backgroundColor: Theme.of(context).backgroundColor,
       elevation: 0.0,
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          imgLogo
+          widget.imgLogo
               ? SizedBox(
                   child: Image.asset(AppImages.logo),
                 )
@@ -37,12 +46,16 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: title,
-                    style: TextStyles.headline1,
+                    text: widget.title,
+                    style: Theme.of(context).textTheme.headline1!.copyWith(
+                          color: Theme.of(context).highlightColor,
+                        ),
                   ),
                   TextSpan(
                     text: 'Fluterando Masterclass',
-                    style: TextStyles.description,
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          color: Theme.of(context).highlightColor,
+                        ),
                   )
                 ],
               ),
@@ -54,16 +67,23 @@ class BaseAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: const EdgeInsets.only(right: 16),
           child: IconButton(
-            onPressed: () {},
-            icon: Image.asset(
-              AppImages.iconMoon,
-            ),
+            onPressed: () {
+              final provider =
+                  Provider.of<ThemeProvider>(context, listen: false);
+              provider.toggleTheme();
+            },
+            icon: provider.isDarkMode
+                ? Image.asset(
+                    AppImages.iconMoonWhite,
+                  )
+                : Image.asset(
+                    AppImages.iconMoonBlack,
+                  ),
           ),
         )
       ],
     );
   }
 
-  @override
-  Size get preferredSize => new Size.fromHeight(110.0);
+  Size get preferredSize => const Size.fromHeight(110.0);
 }

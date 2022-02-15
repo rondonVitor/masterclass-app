@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:masterclass_app/shared/themes/app_colors.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
 
 class SkillWidget extends StatefulWidget {
   final String title;
@@ -43,7 +42,9 @@ class _SkillWidgetState extends State<SkillWidget> {
         children: [
           Text(
             widget.title,
-            style: TextStyles.textDescription,
+            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                  color: AppColors.description,
+                ),
           ),
           Stack(
             children: [
@@ -63,7 +64,7 @@ class _SkillWidgetState extends State<SkillWidget> {
                 width: widget.calcPercent,
                 height: 10,
                 decoration: BoxDecoration(
-                  color: AppColors.primary,
+                  color: Theme.of(context).primaryColor,
                   borderRadius: const BorderRadius.all(
                     Radius.circular(
                       28,

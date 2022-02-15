@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/widgets/base_app_bar_widget.dart';
 
 class AnimationsChallenge3Page extends StatefulWidget {
@@ -75,7 +74,7 @@ class _AnimationsChallenge3PagePage extends State<AnimationsChallenge3Page>
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: AppColors.background,
+        color: Theme.of(context).backgroundColor,
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: AnimatedBuilder(

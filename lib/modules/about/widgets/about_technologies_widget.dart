@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/modules/about/controllers/technologies_controller.dart';
 import 'package:masterclass_app/modules/about/services/technologies_service.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
 import 'package:masterclass_app/shared/widgets/technologies_card_widget.dart';
 
 class AboutTechnologiesWidget extends StatefulWidget {
@@ -34,7 +33,9 @@ class _AboutTechnologiesWidgetState extends State<AboutTechnologiesWidget> {
         children: [
           Text(
             'Tecnologias Favoritas',
-            style: TextStyles.headline2,
+            style: Theme.of(context).textTheme.headline2!.copyWith(
+                  color: Theme.of(context).highlightColor,
+                ),
           ),
           const SizedBox(
             height: 5,

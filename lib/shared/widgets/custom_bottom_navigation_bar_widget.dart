@@ -3,7 +3,9 @@ import 'package:masterclass_app/main.dart';
 
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 import 'package:masterclass_app/shared/themes/app_images.dart';
+import 'package:masterclass_app/shared/themes/theme_provider.dart';
 import 'package:masterclass_app/shared/utils/selected_index_navigation.dart';
+import 'package:provider/provider.dart';
 
 class CustomBottomNavigationBarWidget extends StatefulWidget {
   const CustomBottomNavigationBarWidget({Key? key}) : super(key: key);
@@ -27,10 +29,12 @@ class _CustomBottomNavigationBarWidgetState
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ThemeProvider>(context);
+
     return Container(
       width: double.infinity,
       height: 80,
-      color: AppColors.background,
+      color: Theme.of(context).backgroundColor,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12),
         child: Row(
@@ -49,21 +53,35 @@ class _CustomBottomNavigationBarWidgetState
                           width: 70,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: AppColors.card,
+                            color: Theme.of(context).cardColor,
                             borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                           ),
-                          child: Image.asset(AppImages.iconTarget),
+                          child: provider.isDarkMode
+                              ? Image.asset(
+                                  AppImages.iconTargetWhite,
+                                )
+                              : Image.asset(
+                                  AppImages.iconTargetBlack,
+                                ),
                         )
                       : SizedBox(
                           width: 70,
                           height: 40,
-                          child: Image.asset(AppImages.iconTarget),
+                          child: provider.isDarkMode
+                              ? Image.asset(
+                                  AppImages.iconTargetWhite,
+                                )
+                              : Image.asset(
+                                  AppImages.iconTargetBlack,
+                                ),
                         ),
                   Text(
                     'Atividades',
-                    style: TextStyle(color: AppColors.highlight),
+                    style: TextStyle(
+                      color: Theme.of(context).highlightColor,
+                    ),
                   ),
                 ],
               ),
@@ -84,28 +102,44 @@ class _CustomBottomNavigationBarWidgetState
                           width: 70,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: AppColors.card,
+                            color: Theme.of(context).cardColor,
                             borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                           ),
-                          child: Image.asset(AppImages.iconGithub),
+                          child: provider.isDarkMode
+                              ? Image.asset(
+                                  AppImages.iconGithubWhite,
+                                )
+                              : Image.asset(
+                                  AppImages.iconGithubBlack,
+                                ),
                         )
                       : SizedBox(
                           width: 70,
                           height: 40,
-                          child: Image.asset(AppImages.iconGithub),
+                          child: provider.isDarkMode
+                              ? Image.asset(
+                                  AppImages.iconGithubWhite,
+                                )
+                              : Image.asset(
+                                  AppImages.iconGithubBlack,
+                                ),
                         ),
                   Text(
                     'Repositórios',
-                    style: TextStyle(color: AppColors.highlight),
+                    style: TextStyle(
+                      color: Theme.of(context).highlightColor,
+                    ),
                   ),
                 ],
               ),
             ),
             Container(
               width: 1,
-              decoration: BoxDecoration(color: AppColors.description),
+              decoration: BoxDecoration(
+                color: AppColors.description,
+              ),
             ),
             GestureDetector(
               onTap: () {
@@ -119,14 +153,14 @@ class _CustomBottomNavigationBarWidgetState
                           width: 70,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: AppColors.card,
+                            color: Theme.of(context).cardColor,
                             borderRadius: const BorderRadius.all(
                               Radius.circular(20),
                             ),
                           ),
                           child: Icon(
                             Icons.person,
-                            color: AppColors.highlight,
+                            color: Theme.of(context).highlightColor,
                             size: 28,
                           ),
                         )
@@ -135,13 +169,15 @@ class _CustomBottomNavigationBarWidgetState
                           height: 40,
                           child: Icon(
                             Icons.person,
-                            color: AppColors.highlight,
+                            color: Theme.of(context).highlightColor,
                             size: 28,
                           ),
                         ),
                   Text(
                     'Sobre o dev',
-                    style: TextStyle(color: AppColors.highlight),
+                    style: TextStyle(
+                      color: Theme.of(context).highlightColor,
+                    ),
                   ),
                 ],
               ),

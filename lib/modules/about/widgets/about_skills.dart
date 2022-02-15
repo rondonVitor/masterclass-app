@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app/shared/themes/app_colors.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
 import 'package:masterclass_app/shared/widgets/skill_widget.dart';
 
 class AboutSkills extends StatelessWidget {
@@ -15,7 +13,9 @@ class AboutSkills extends StatelessWidget {
         children: [
           Text(
             'Habilidades e Competências',
-            style: TextStyles.headline2,
+            style: Theme.of(context).textTheme.headline2!.copyWith(
+                  color: Theme.of(context).highlightColor,
+                ),
           ),
           const SizedBox(
             height: 5,
@@ -23,7 +23,7 @@ class AboutSkills extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: AppColors.card,
+              color: Theme.of(context).cardColor,
               borderRadius: const BorderRadius.all(
                 Radius.circular(28),
               ),

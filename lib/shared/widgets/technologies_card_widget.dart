@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:masterclass_app/shared/themes/app_colors.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
-
 class TechnologiesCardWidget extends StatelessWidget {
   final String title;
   final String image;
@@ -21,7 +18,7 @@ class TechnologiesCardWidget extends StatelessWidget {
         width: 94,
         height: 100,
         decoration: BoxDecoration(
-          color: AppColors.card,
+          color: Theme.of(context).cardColor,
           borderRadius: const BorderRadius.all(
             Radius.circular(
               28,
@@ -36,7 +33,9 @@ class TechnologiesCardWidget extends StatelessWidget {
               Image.asset(image),
               Text(
                 title,
-                style: TextStyles.textHighlight,
+                style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      color: Theme.of(context).highlightColor,
+                    ),
               ),
             ],
           ),

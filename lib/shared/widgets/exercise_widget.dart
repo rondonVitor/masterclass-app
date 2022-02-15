@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app/shared/themes/app_colors.dart';
-import 'package:masterclass_app/shared/themes/app_text_styles.dart';
 
 class ExerciseWidget extends StatelessWidget {
   final String numberExercise;
@@ -26,7 +24,7 @@ class ExerciseWidget extends StatelessWidget {
           width: double.infinity,
           height: 64,
           decoration: BoxDecoration(
-            color: AppColors.card,
+            color: Theme.of(context).cardColor,
             borderRadius: const BorderRadius.all(
               Radius.circular(28),
             ),
@@ -40,7 +38,7 @@ class ExerciseWidget extends StatelessWidget {
                   width: 33,
                   height: 33,
                   decoration: BoxDecoration(
-                    color: AppColors.primary,
+                    color: Theme.of(context).primaryColor,
                     borderRadius: const BorderRadius.all(
                       Radius.circular(50),
                     ),
@@ -49,13 +47,18 @@ class ExerciseWidget extends StatelessWidget {
                     child: Text(
                       numberExercise,
                       style: TextStyle(
-                        color: AppColors.highlight,
+                        color: Theme.of(context).highlightColor,
                         fontSize: 15,
                       ),
                     ),
                   ),
                 ),
-                Text(titleExercise, style: TextStyles.headline2),
+                Text(
+                  titleExercise,
+                  style: Theme.of(context).textTheme.headline2!.copyWith(
+                        color: Theme.of(context).highlightColor,
+                      ),
+                ),
               ],
             ),
           ),

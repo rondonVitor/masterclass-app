@@ -11,7 +11,8 @@ import 'package:masterclass_app/modules/mockups/challenge1/mockups_challenge1_pa
 import 'package:masterclass_app/modules/mockups/challenge2/tinder_login_page.dart';
 import 'package:masterclass_app/modules/mockups/mockups_page.dart';
 import 'package:masterclass_app/my_app_widget.dart';
-import 'package:masterclass_app/shared/themes/app_colors.dart';
+import 'package:masterclass_app/shared/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -20,42 +21,38 @@ class AppWidget extends StatefulWidget {
   State<AppWidget> createState() => _AppWidgetState();
 }
 
-class _AppWidgetState extends State<AppWidget>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    duration: const Duration(seconds: 2),
-    vsync: this,
-  )..repeat(reverse: true);
-  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
-    begin: Offset.zero,
-    end: const Offset(1.5, 0.0),
-  ).animate(CurvedAnimation(
-    parent: _controller,
-    curve: Curves.elasticIn,
-  ));
-
+class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Masterclass Atividades',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: AppColors.primary,
-        backgroundColor: AppColors.background,
-      ),
-      routes: {
-        "/": (context) => const MyAppWidget(),
-        "/home": (context) => const HomePage(),
-        "/about": (context) => const AboutPage(),
-        "/animations": (context) => const AnimationsPage(),
-        "/animations/challenge1": (context) => const AnimationsChallenge1Page(),
-        "/animations/challenge2": (context) => const AnimationsChallenge2Page(),
-        "/animations/challenge3": (context) => const AnimationsChallenge3Page(),
-        "/mockups": (context) => const MockupsPage(),
-        "/mockups/challenge1": (context) => const MockupsChallenge1Page(),
-        "/mockups/challenge2": (context) => const TinderLoginPage(),
-        "/design_paterns": (context) => const DesignPaternsPage(),
-        "/design_paterns/challenge1": (context) => const ProductPage()
+    return ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      builder: (context, _) {
+        final themeProvider = Provider.of<ThemeProvider>(context);
+
+        return MaterialApp(
+          title: 'Masterclass Atividades',
+          debugShowCheckedModeBanner: false,
+          themeMode: themeProvider.themeMode,
+          darkTheme: MyThemes.darkTheme,
+          theme: MyThemes.lightTheme,
+          routes: {
+            "/": (context) => const MyAppWidget(),
+            "/home": (context) => const HomePage(),
+            "/about": (context) => const AboutPage(),
+            "/animations": (context) => const AnimationsPage(),
+            "/animations/challenge1": (context) =>
+                const AnimationsChallenge1Page(),
+            "/animations/challenge2": (context) =>
+                const AnimationsChallenge2Page(),
+            "/animations/challenge3": (context) =>
+                const AnimationsChallenge3Page(),
+            "/mockups": (context) => const MockupsPage(),
+            "/mockups/challenge1": (context) => const MockupsChallenge1Page(),
+            "/mockups/challenge2": (context) => const TinderLoginPage(),
+            "/design_paterns": (context) => const DesignPaternsPage(),
+            "/design_paterns/challenge1": (context) => const ProductPage()
+          },
+        );
       },
     );
   }

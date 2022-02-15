@@ -25,7 +25,7 @@ class _AnimationsChallenge1PageState extends State<AnimationsChallenge1Page> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: AppColors.background,
+        color: Theme.of(context).backgroundColor,
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: AnimatedAlign(
