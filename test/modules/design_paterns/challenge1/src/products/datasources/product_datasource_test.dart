@@ -36,7 +36,7 @@ void main() {
 
     final produtos = await productDatasource.getProducts();
 
-    expectLater(produtos, jsonDecode(jsonReturn));
+    expect(produtos, jsonDecode(jsonReturn));
   });
 }
 
