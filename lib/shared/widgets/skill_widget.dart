@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_app/modules/about/controllers/skills_controller.dart';
+import 'package:masterclass_app/modules/about/models/skills_model.dart';
 
 import 'package:masterclass_app/shared/themes/app_colors.dart';
 
 class SkillWidget extends StatefulWidget {
   final String title;
   final double percent;
-  double calcPercent;
+  final double calcPercent;
 
-  SkillWidget({
+  const SkillWidget({
     Key? key,
     required this.title,
     required this.percent,
@@ -19,17 +21,23 @@ class SkillWidget extends StatefulWidget {
 }
 
 class _SkillWidgetState extends State<SkillWidget> {
+  late SkillsController controller;
+  late SkillsModel model;
+
   @override
   void initState() {
     super.initState();
 
-    calculatePercentSkill();
-  }
+    model = SkillsModel(
+        percent: widget.percent,
+        title: widget.title,
+        calcPercent: widget.calcPercent);
 
-  calculatePercentSkill() {
-    const int width = 255;
+    controller = SkillsController(
+      skillsModel: model,
+    );
 
-    widget.calcPercent = ((widget.percent / 100) * width);
+    controller.calculatePercentSkill();
   }
 
   @override
@@ -41,7 +49,7 @@ class _SkillWidgetState extends State<SkillWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            widget.title,
+            model.title,
             style: Theme.of(context).textTheme.subtitle1!.copyWith(
                   color: AppColors.description,
                 ),
@@ -61,7 +69,7 @@ class _SkillWidgetState extends State<SkillWidget> {
                 ),
               ),
               Container(
-                width: widget.calcPercent,
+                width: model.calcPercent,
                 height: 10,
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
