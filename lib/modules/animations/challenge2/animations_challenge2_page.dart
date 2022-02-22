@@ -21,7 +21,7 @@ class _AnimationsChallenge2PageState extends State<AnimationsChallenge2Page> {
       appBar: BaseAppBarWidget(
         imgLogo: false,
         appBar: AppBar(),
-        title: 'Expansion Tile Animado\n',
+        title: 'Expansion Tile\n',
       ),
       body: Container(
           width: double.infinity,

@@ -1,16 +1,34 @@
-# masterclass_app
+<h1 align="center">Masterclass App</h1>
 
-A new Flutter project.
 
-## Getting Started
+<h2 align="center">Sobre 📖</h2>
+   
+<p>
+   O app da masterclass foi desenvolvido na masterclass flutterando com o objetivo de organizar todos os desafios e exercicios em um só lugar. Em um curso incrível que aborda diversos conteúdos, além da intensa rotina de estudos, muitas conexões e networking, trabalho em grupo e em comunidade. <br>
+   O curso aborda animações, leitura de mockup, design patterns, injeção de dependências, teste de unidade, gerenciamento de estados, arquitetura e SOLID. <br>
+</p>
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+<h2 align="center">Como Usar 🤔</h2>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+   ```
+   - Clone esse repositório:
+   $ git clone https://github.com/rondonVitor/masterclass-app.git
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   - Entre no diretório:
+   $ cd masterclass-app
+
+   - Instale as dependências:
+   $ flutter pub get
+
+   - Inicie o app: 
+   $ flutter run
+   ```
+
+---
+
+   >Esse projeto foi desenvolvido com 💙 na #flutterando_masterclass da **[Flutterando](https://masterclass.flutterando.com.br/public/products)**.<br> 
+
+
+---
