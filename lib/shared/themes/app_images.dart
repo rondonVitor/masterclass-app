@@ -47,4 +47,6 @@ class AppImages {
   static const iconFlutterWhite = "assets/images/flutter_white.png";
 
   static const iconDart = "assets/images/dart.png";
+
+  static const masterclassLogo = "assets/images/masterclass_logo.png";
 }

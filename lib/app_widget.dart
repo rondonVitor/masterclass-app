@@ -10,6 +10,7 @@ import 'package:masterclass_app/modules/home/home_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge1/mockups_challenge1_page.dart';
 import 'package:masterclass_app/modules/mockups/challenge2/tinder_login_page.dart';
 import 'package:masterclass_app/modules/mockups/mockups_page.dart';
+import 'package:masterclass_app/modules/splash/splash_page.dart';
 import 'package:masterclass_app/my_app_widget.dart';
 import 'package:masterclass_app/shared/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
@@ -36,7 +37,8 @@ class _AppWidgetState extends State<AppWidget> {
           darkTheme: MyThemes.darkTheme,
           theme: MyThemes.lightTheme,
           routes: {
-            "/": (context) => const MyAppWidget(),
+            "/": (context) => const SplashPage(),
+            "/pages": (context) => const MyAppWidget(),
             "/home": (context) => const HomePage(),
             "/about": (context) => const AboutPage(),
             "/animations": (context) => const AnimationsPage(),
