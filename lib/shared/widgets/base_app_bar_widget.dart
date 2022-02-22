@@ -28,6 +28,9 @@ class _BaseAppBarWidgetState extends State<BaseAppBarWidget> {
     final provider = Provider.of<ThemeProvider>(context);
 
     return AppBar(
+      iconTheme: IconThemeData(
+        color: Theme.of(context).highlightColor,
+      ),
       shadowColor: Colors.transparent,
       toolbarHeight: 130,
       backgroundColor: Theme.of(context).backgroundColor,
