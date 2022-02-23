@@ -54,8 +54,8 @@ class HomePage extends StatelessWidget {
                     urlImage: provider.isDarkMode
                         ? AppImages.iconToysBlack
                         : AppImages.iconToysWhite,
-                    redirectUrl: '/',
-                    exercisesNumber: '3',
+                    redirectUrl: '/construct',
+                    exercisesNumber: '0',
                   ),
                   CustomCardWidget(
                     title: 'Design Paterns',

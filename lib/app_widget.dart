@@ -4,6 +4,7 @@ import 'package:masterclass_app/modules/animations/animations_page.dart';
 import 'package:masterclass_app/modules/animations/challenge1/animations_challenge1_page.dart';
 import 'package:masterclass_app/modules/animations/challenge2/animations_challenge2_page.dart';
 import 'package:masterclass_app/modules/animations/challenge3/animations_challenge3_page.dart';
+import 'package:masterclass_app/modules/construct/construct_page.dart';
 import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/product_page.dart';
 import 'package:masterclass_app/modules/design_paterns/design_paterns_page.dart';
 import 'package:masterclass_app/modules/home/home_page.dart';
@@ -39,6 +40,7 @@ class _AppWidgetState extends State<AppWidget> {
           routes: {
             "/": (context) => const SplashPage(),
             "/pages": (context) => const MyAppWidget(),
+            "/construct": (context) => const ConstructPage(),
             "/home": (context) => const HomePage(),
             "/about": (context) => const AboutPage(),
             "/animations": (context) => const AnimationsPage(),
