@@ -67,6 +67,15 @@ class HomePage extends StatelessWidget {
                     redirectUrl: '/design_paterns',
                     exercisesNumber: '1',
                   ),
+                  CustomCardWidget(
+                    title: 'Bloc',
+                    subtitle: 'Estudo sobre Bloc, utilizando o viacep',
+                    urlImage: provider.isDarkMode
+                        ? AppImages.designServicesBlack
+                        : AppImages.designServicesWhite,
+                    redirectUrl: '/bloc',
+                    exercisesNumber: '1',
+                  ),
                 ],
               ),
             ),
