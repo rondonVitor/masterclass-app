@@ -5,10 +5,10 @@ class SearchCepPage1 extends StatefulWidget {
   const SearchCepPage1({Key? key}) : super(key: key);
 
   @override
-  State<SearchCepPage1> createState() => _HomePageState();
+  State<SearchCepPage1> createState() => _SearchCepPage1State();
 }
 
-class _HomePageState extends State<SearchCepPage1> {
+class _SearchCepPage1State extends State<SearchCepPage1> {
   final textController = TextEditingController();
 
   final searchCepBloc = SearchCepBloc1();

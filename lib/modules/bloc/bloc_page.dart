@@ -26,6 +26,11 @@ class BlocPage extends StatelessWidget {
                 titleExercise: 'Desafio 01',
                 urlRedirect: '/bloc/challenge1',
               ),
+              ExerciseWidget(
+                numberExercise: '1',
+                titleExercise: 'Desafio 02',
+                urlRedirect: '/bloc/challenge2',
+              ),
             ],
           ),
         ),

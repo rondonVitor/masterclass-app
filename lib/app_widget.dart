@@ -6,6 +6,7 @@ import 'package:masterclass_app/modules/animations/challenge2/animations_challen
 import 'package:masterclass_app/modules/animations/challenge3/animations_challenge3_page.dart';
 import 'package:masterclass_app/modules/bloc/bloc_page.dart';
 import 'package:masterclass_app/modules/bloc/challenge1/search_cep_page1.dart';
+import 'package:masterclass_app/modules/bloc/challenge2/search_cep_page2.dart';
 import 'package:masterclass_app/modules/construct/construct_page.dart';
 import 'package:masterclass_app/modules/design_paterns/challenge1/src/products/product_page.dart';
 import 'package:masterclass_app/modules/design_paterns/design_paterns_page.dart';
@@ -59,6 +60,7 @@ class _AppWidgetState extends State<AppWidget> {
             "/design_paterns/challenge1": (context) => const ProductPage(),
             "/bloc": (context) => const BlocPage(),
             "/bloc/challenge1": (context) => const SearchCepPage1(),
+            "/bloc/challenge2": (context) => const SearchCepPage2(),
           },
         );
       },
